@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom"
 
 class Form extends Component {
 
@@ -24,14 +25,17 @@ class Form extends Component {
     let {username, password} = this.state
 
     return (
+      <div align="center">
       <form onSubmit={this.handleSubmit}>
         <h1>{formName}</h1>
-        <label htmlFor="username">Username:</label>
-        <input type="text" autoComplete="off" name="username" value={username} onChange={this.handleChange}/>
-        <label htmlFor="password">Password:</label>
-        <input type="password" autoComplete="off" name="password" value={password} onChange={this.handleChange}/>
+        <label htmlFor="username">Username:</label><br/>
+        <input type="text" autoComplete="off" name="username" value={username} onChange={this.handleChange}/><br/>
+        <label htmlFor="password">Password:</label><br/>
+        <input type="password" autoComplete="off" name="password" value={password} onChange={this.handleChange}/><br/>
         <input type="submit" value="Submit"/>
       </form>
+      <Link to="/">Back To Main Page</Link>
+      </div>
     );
   }
 

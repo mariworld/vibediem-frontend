@@ -13,9 +13,9 @@ const NavBar = () => {
      <ul>
      <button> <NavLink to="/signup">Vibe Up</NavLink></button>
       </ul>
-     <ul>
+     {/* <ul>
      <button><NavLink to="/crib">Crib</NavLink></button>
-      </ul>
+      </ul> */}
     </ul>
   )
 };

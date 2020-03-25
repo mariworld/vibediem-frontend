@@ -1,16 +1,20 @@
-  
+
 import React from 'react';
+import NavBar from './NavBar'
+import { BrowserRouter, Route, Link } from "react-router-dom"
 //this page should have the option to login or signup
 //should have two buttons.
 const Home = () => {
-  const handleLogin = () => {
-    console.log('hi')
-  }
+  // const handleLogin = () => {
+  //   console.log('hi')
+  // }
   return(
-  <div>
-    <h1 id="header">Vibe Diem</h1>
-      <button onClick={handleLogin}>Login</button>
-      <button>SignUp</button>
+  <div style={{paddingTop:'-100px'}} align="center">
+      {/* <NavBar/> */}
+     <h1 id="header" align="center">vibe diem</h1> 
+  
+       <Link to="/login">Login</Link> <br/>
+       <Link to="/signup">Sign Up</Link> <br/>
   </div>
 );
 }
