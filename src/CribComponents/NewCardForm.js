@@ -53,6 +53,7 @@ class NewCardForm extends Component {
   }
 
   render() {
+    console.log(this.state)
     return (
       <form onSubmit={this.handleSubmit}>
         <label>Title:</label>  <br/>
@@ -61,8 +62,8 @@ class NewCardForm extends Component {
         <input type="text" autoComplete="off" name="content_url" value={this.state.content_url} onChange={this.handleChange} /><br/>
         <label>Message:</label><br/>
         <input type="text" autoComplete="off" name="message" value={this.state.message} onChange={this.handleChange} /><br/>
-        <label>Card Color:</label> <br/>
-        <input type="color" autoComplete="off" name="color" value={this.state.color} onChange={this.handleColor} /><br/>
+        {/* <label>Card Color:</label> <br/>
+        <input type="color" autoComplete="off" name="color" value={this.state.color} onChange={this.handleColor} /><br/> */}
         <input type="submit" value="Create New Card" />
       </form>
     );

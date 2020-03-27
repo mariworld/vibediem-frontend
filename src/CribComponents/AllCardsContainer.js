@@ -9,18 +9,22 @@ export class AllCardsContainer extends Component {
     state = {
         cards: []
     }
-
     componentDidMount = () => {
+        //there are no cards in this state 
         fetch("http://localhost:3000/cards")
         .then(r => r.json())
         .then(cardsArr => {
         this.setState({
-            cards: cardsArr,
-            token: localStorage.token})
+            cards: cardsArr
+            })
     })
     }
 
-    
+    //lets send this state back to the parent
+    // updateParent = () => {
+    //   this.props.updateCardArrayMyChild(this.state)
+    // }
+
     renderCards = () => {
         let arrayOfCards = this.props.allCards.sort((a,b) => {
            return Date.parse(b.created_at) - Date.parse(a.created_at) 
@@ -32,7 +36,10 @@ export class AllCardsContainer extends Component {
                     token={this.props.token}
                     delOneCard={this.props.delOneCard} 
                     currentUser={this.props.user}
-                    delYourCard={this.props.delYourCard} />
+                    delYourCard={this.props.delYourCard}
+                    addComment={this.props.addComment}
+                    comments={this.props.comments}
+                     />
         })
         return arrayOfCards
     }
@@ -42,12 +49,6 @@ export class AllCardsContainer extends Component {
     }
 
   
-
-    // updateStateInAllCardsContainer = () => {
-    //     this.setState({
-    //         cards: []
-    //     })
-    // }
     
     render() {
         let {cards, user} = this.props

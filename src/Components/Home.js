@@ -9,7 +9,7 @@ const Home = () => {
   //   console.log('hi')
   // }
   return(
-  <div style={{paddingTop:'-100px'}} align="center">
+  <div id="center" style={{height: "200px",  position: "relative"}} align="center">
       {/* <NavBar/> */}
      <h1 id="header" align="center">vibe diem</h1> 
   
@@ -19,3 +19,4 @@ const Home = () => {
 );
 }
 export default Home;
+

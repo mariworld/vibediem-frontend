@@ -1,5 +1,7 @@
 .App {
-  text-align: center;
+    text-align: center;
+   
+
 }
 
 
@@ -37,6 +39,12 @@ a {
   color: black;
 }
 
+.center {
+  height: 200px;
+  position: relative;
+  border: 3px solid green;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -45,7 +53,7 @@ a {
     transform: rotate(360deg);
   }
 
-
+ 
 
 
 }

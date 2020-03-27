@@ -8,6 +8,12 @@ body {
  
 }
 
+.center {
+  height: 200px;
+  position: relative;
+  border: 3px solid green;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
